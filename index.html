@@ -257,7 +257,7 @@ body{--scroll-y:0}
 .supporters-section::before{content:'環境省・東京都・民間基金等との事業・助成実績';display:block;font-size:15px;font-weight:700;line-height:1.7;margin-bottom:-10px}
 
 /* pre-contact CTA */
-.pre-contact-cta{margin:40px 80px 0;background:#131A38;color:#F3EFE6;border-radius:12px;padding:72px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;overflow:hidden;position:relative}
+.pre-contact-cta{margin:40px 80px 48px;background:#131A38;color:#F3EFE6;border-radius:12px;padding:72px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;overflow:hidden;position:relative}
 .pre-contact-cta::after{content:'OGASAWARA';position:absolute;right:-12px;bottom:-24px;font:800 clamp(72px,11vw,150px)/1 'Bricolage Grotesque',sans-serif;color:transparent;-webkit-text-stroke:1px rgba(243,239,230,.12);pointer-events:none}
 .pre-contact-cta h2{font-size:clamp(34px,4vw,58px);line-height:1.35;margin:0;position:relative;z-index:1}
 .pre-contact-cta p{margin:12px 0 0;line-height:1.9;opacity:.8;position:relative;z-index:1}
@@ -297,7 +297,7 @@ body{--scroll-y:0}
  #activities .activity-card>h3{font-size:22px!important}
  .collab-intro,.collab-options,.collab-cases,.contact-copy,.contact-form-wrap{grid-column:1 / -1!important}
  .collab-visual{height:240px}.collab-card{grid-template-columns:48px 1fr auto;padding:20px 4px}.collab-cases{grid-template-columns:1fr}
- .pre-contact-cta{margin:20px 20px 0;padding:42px 24px;grid-template-columns:1fr}.pre-contact-cta a{justify-self:start}
+ .pre-contact-cta{margin:20px 20px 24px;padding:42px 24px;grid-template-columns:1fr}.pre-contact-cta a{justify-self:start}
  .contact-copy{position:relative;top:auto}.contact-form-wrap{padding:24px 18px}.inquiry-form{grid-template-columns:1fr}.form-field.full{grid-column:auto}.form-actions{grid-column:auto}
  .fixed-collab-cta{right:12px;left:12px;bottom:12px;justify-content:center;border-radius:10px;padding:14px 16px}
 }
@@ -399,7 +399,6 @@ body{--scroll-y:0}
 #about .about-team-photo img{background:#E6DFCF}
 #about .about-team-photo:hover{box-shadow:0 30px 72px rgba(19,26,56,.15)}
 #about .about-team-photo{transition:box-shadow .35s ease}
-#about .about-team-photo::after{content:"BOISS TEAM";position:absolute;left:16px;bottom:14px;font:800 11px/1 'Bricolage Grotesque',sans-serif;letter-spacing:.18em;color:#F3EFE6;background:rgba(19,26,56,.72);padding:8px 10px;border-radius:999px;backdrop-filter:blur(4px)}
 #about .about-team-photo{position:relative}
 #activities .activity-card.story-block,#projects .pcard.story-block{transition-duration:.82s,.92s,.65s}
 #numbers .story-block{transform:translate3d(0,34px,0) scale(.98)}
@@ -415,7 +414,6 @@ body{--scroll-y:0}
 }
 @media (max-width:768px){
   #about .about-team-photo{grid-column:1/-1!important;aspect-ratio:1565/1046!important;height:auto!important;margin-top:26px!important;border-radius:6px!important}
-  #about .about-team-photo::after{font-size:10px;left:12px;bottom:10px;padding:7px 9px}
   .story-block{filter:none;transform:translate3d(0,28px,0) scale(.994)}
   .story-block.story-left,.story-block.story-right{transform:translate3d(0,28px,0) scale(.994)}
   .parallax-media{transform:none!important}
@@ -617,7 +615,7 @@ body{--scroll-y:0}
 <p style="margin: 0; font-size: 14px; line-height: 1.95">固有トンボ類（2004〜）、オガサワラハンミョウ（2015〜）、固有ハナバチ類（2022〜）、チチジマヒメカタゾウムシ（2023〜）を保全しています。</p>
 </article>
 <article class="reveal activity-card card motion-reveal" data-activity-index="03" style="display: flex; flex-direction: column; gap: 18px">
-<div class="card-photo" style="height: 360px; border-radius: 4px; overflow: hidden"><img alt="BOISS KIDS 農園での収穫体験" class="zoom" src="images/img-07.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/></div>
+<div class="card-photo" style="height: 360px; border-radius: 4px; overflow: hidden"><img alt="海岸で拾ったごみを分別する子どもたち" class="zoom" src="images/img-education.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/></div>
 <span class="en" style="font-size: 13px; color: #1A7A43; font-weight: 800; letter-spacing: 0.2em">03 — EDUCATION</span>
 <h3 style="margin: 0; font-size: 22px; line-height: 1.5">環境教育</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.95">小笠原中学校・小笠原高校での授業、島の子どもが1泊2日で「とる・つくる・たべる」を体験する「BOISS KIDS」、大学のビーチクリーン受け入れ。</p>
@@ -1089,7 +1087,7 @@ body{--scroll-y:0}
 </section>
 <!-- partners -->
 <!-- 08 CONTACT -->
-<section aria-label="連携相談へのご案内" class="pre-contact-cta motion-reveal"><div><h2 class="min">小笠原で、次の環境プロジェクトを。</h2><p>企業・NPO・学校・研究機関のみなさまへ。まだ企画が固まっていなくても、目的や人数から一緒に整理します。</p></div><a class="btn btn-light" href="#contact" style="text-decoration:none;background:#F3EFE6;color:#131A38;padding:18px 27px;border-radius:999px;font-weight:700;display:flex;gap:12px;align-items:center">小笠原での連携を相談する <span class="arrow">→</span></a></section><section id="contact" style="background: #1A7A43; color: #fff; padding: 120px 80px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px 24px; align-items: end">
+<section aria-label="連携相談へのご案内" class="pre-contact-cta motion-reveal"><div><h2 class="min">小笠原で、次の環境プロジェクトを。</h2><p>企業・NPO・学校・研究機関のみなさまへ。小笠原の自然と向き合う取り組みを、ゼロから一緒につくりませんか。</p></div><a class="btn btn-light" href="#contact" style="text-decoration:none;background:#F3EFE6;color:#131A38;padding:18px 27px;border-radius:999px;font-weight:700;display:flex;gap:12px;align-items:center">小笠原での連携を相談する <span class="arrow">→</span></a></section><section id="contact" style="background: #1A7A43; color: #fff; padding: 120px 80px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px 24px; align-items: end">
 <div class="contact-copy motion-reveal from-left">
 <span class="en" style="font-size:14px;letter-spacing:.3em">08 ／ CONTACT</span>
 <div class="en" style="font-size:clamp(58px,8vw,112px);font-weight:800;line-height:.9">Let’s Work<br/>Together.</div>
