@@ -112,6 +112,16 @@ footer a{color:var(--paper)}
 .price dd{margin:0;text-align:right;font-weight:700}
 .price .member{color:var(--green)}
 .shop-note{margin:24px 0 0;font-size:14px;line-height:1.9}
+.record{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:28px}
+.record>li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px 30px}
+.rec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.rec-date{font-size:15px;font-weight:800;color:var(--green);letter-spacing:.06em}
+.rec-head h3{margin:0;font-size:20px;line-height:1.5}
+.rec-meta{margin:10px 0 20px;font-size:13px;color:var(--muted);line-height:1.8}
+.rec-body{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:start}
+.rec-body.single{display:block}
+.rec-body .body-text:last-child{margin-bottom:0}
+.rec-photos{display:grid;gap:12px}
 @media(max-width:960px){
   .species{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -138,6 +148,10 @@ footer a{color:var(--paper)}
   .since-h{display:block;margin:4px 0 0}
   .funding{padding:18px;font-size:12.5px}
   .back{padding-bottom:80px}
+  .record>li{padding:20px 18px}
+  .rec-body{grid-template-columns:1fr;gap:18px}
+  .rec-head{gap:4px 12px}
+  .rec-head h3{font-size:18px}
   .products{grid-template-columns:1fr}
   .product-band{font-size:20px}
   .benefits{padding:18px}
@@ -193,6 +207,48 @@ footer a{color:var(--paper)}
 </div>
 <figure><div class="photo"><img alt="芝生の上でバケツに集めたゴミを仕分けする参加者たち" loading="lazy" src="images/sports-cleanup.jpg"/></div><figcaption>クリーンナップ活動の様子</figcaption></figure>
 </div>
+</div>
+</section>
+
+<section class="section" id="record">
+<div class="wrap">
+<div class="section-title"><h2>活動の記録</h2><span class="en">RECORD</span></div>
+<p class="body-text">2022年6月、ネイチャースポーツ部門として最初の活動を行いました。トレイルランニングイベントを2回、トレイル整備（清掃活動）を1回、合計3回実施しています。トレイルランニングイベントでは約6〜8kmを走り、道中で山道や坂道の走り方をレクチャー。ランニング後には1時間ほど、質疑応答や実際に使っている道具の紹介、大会の話などを行いました。</p>
+<ol class="record">
+<li>
+<div class="rec-head"><span class="en rec-date">2022.06.19</span><h3>トレイルランニング講習会（第1弾）</h3></div>
+<p class="rec-meta">対象：一般島民 ／ 参加：約30名 ／ 協力：オガラン（OgasawaRun）、川トレ</p>
+<div class="rec-body">
+<div>
+<p class="body-text">国内外で活躍するトレイルランナー・南圭介さんを講師に、青灯から長崎展望台までのコースを走りました。参加者の大半はランニング未経験で、最年少は5歳。朝の時点では9割の方が初心者コースの予定でしたが、途中の分岐で大半の方が上級者コースを選択。汗が滝のように出る炎天下でも、笑顔で山を楽しむ姿が見られました。</p>
+<p class="body-text">形から入らなくても良い。専門の道具も必要ない。5歳でも何歳でも始められる。このスタイルで、山の魅力、走る魅力を島のみなさんと感じていきたいと考えています。</p>
+</div>
+<div class="rec-photos">
+<figure><div class="photo"><img alt="山道を笑顔で走る講習会の参加者たち" loading="lazy" src="images/sports-2022-trail.jpg"/></div></figure>
+<figure><div class="photo"><img alt="青灯の屋根の下で準備体操をする参加者たち" loading="lazy" src="images/sports-2022-warmup.jpg"/></div></figure>
+</div>
+</div>
+</li>
+<li>
+<div class="rec-head"><span class="en rec-date">2022.06.25</span><h3>トレイルランニング体験・講習会（中学生）</h3></div>
+<p class="rec-meta">対象：父島の中学生 ／ 参加：4名</p>
+<div class="rec-body">
+<div>
+<p class="body-text">父島の中学生と、青灯から釣浜入口を経て長崎展望台まで走りました。お喋りを交えながらも走りについてくる島っ子のポテンシャルの高さに驚かされる一日に。長崎展望台へのキツい登り300mでは競走になり、皆でラストスパート。楽しそうに走っていました。</p>
+</div>
+<div class="rec-photos one">
+<figure><div class="photo"><img alt="長崎展望台で海を背にポーズをとる中学生とスタッフ" loading="lazy" src="images/sports-2022-junior.jpg"/></div></figure>
+</div>
+</div>
+</li>
+<li>
+<div class="rec-head"><span class="en rec-date">2022.06.26</span><h3>トレイル整備・クリーンナップ</h3></div>
+<p class="rec-meta">対象：一般島民 ／ 参加：8名 ／ 協力：オガラン（OgasawaRun）、川トレ</p>
+<div class="rec-body single">
+<p class="body-text">第1弾・第2弾のイベントで利用したコースや遊歩道周辺で、ゴミの回収を行いました。世界自然遺産の島だけあって一見ゴミは少なそうでしたが、道端をよく見てみるとあちこちに。1時間ほどでバケツ数個分になりました。回収にご協力いただいた皆様、ありがとうございました。</p>
+</div>
+</li>
+</ol>
 </div>
 </section>
 
