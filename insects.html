@@ -50,15 +50,11 @@ img{max-width:100%}
 
 /* habitat */
 .body-text{margin:0 0 36px;max-width:760px;font-size:15px;line-height:2.05}
-.figs{display:grid;gap:36px}
+.figs{display:grid;gap:28px}
 figure{margin:0}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .photo{border-radius:6px;overflow:hidden;background:var(--sand)}
 .photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
-.ph{position:relative;aspect-ratio:16/7;border-radius:6px;overflow:hidden;background:#3F6A4A;display:flex;align-items:center;justify-content:center}
-.ph::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 16px)}
-.ph span{position:relative;font-size:12px;letter-spacing:.08em;color:#fff;background:rgba(19,26,56,.8);padding:6px 10px;border-radius:3px}
-.ph.moss{background:#6E7F42}
 figcaption{margin-top:12px;font-size:14px;line-height:1.8;color:var(--muted)}
 .funding{margin:48px 0 0;padding:24px 28px;background:var(--sand);border-radius:6px;font-size:13px;line-height:2;color:var(--muted)}
 
@@ -77,6 +73,16 @@ footer .wrap{display:flex;flex-direction:column;gap:36px}
 .f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;opacity:.7;border-top:1px solid rgba(243,239,230,.2);padding-top:22px}
 footer a{color:var(--paper)}
 
+.since-h{font-size:14px;font-weight:800;color:var(--green);margin-left:14px;letter-spacing:.06em}
+.species h3 a{color:inherit;text-decoration:none;border-bottom:1px solid #C9BFA9}
+.species h3 a:hover{color:var(--green)}
+.topic{margin-top:56px}
+.topic h3{margin:0 0 18px;font-size:20px;line-height:1.5;padding-left:14px;border-left:4px solid var(--green)}
+.topic .body-text{margin-bottom:20px}
+.triple{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:start}
+.figs{margin-top:28px}
+.pair figcaption,.triple figcaption,.split figcaption{font-size:13px}
 @media(max-width:960px){
   .species{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -97,8 +103,10 @@ footer a{color:var(--paper)}
   .section-title{flex-direction:column;gap:6px}
   .section-title h2{font-size:22px}
   .species{grid-template-columns:1fr;gap:12px}
-  .pair{grid-template-columns:1fr}
-  .ph{aspect-ratio:4/3}
+  .pair,.triple,.split{grid-template-columns:1fr}
+  .split{gap:20px}
+  .topic{margin-top:40px}
+  .since-h{display:block;margin:4px 0 0}
   .funding{padding:18px;font-size:12.5px}
   .back{padding-bottom:80px}
 }
@@ -124,7 +132,7 @@ footer a{color:var(--paper)}
 <span class="en label">ENDEMIC SPECIES</span>
 </div>
 <h1 class="min">希少昆虫の保全</h1>
-<p class="lead">小笠原には、この島々にしかいない固有の昆虫が数多く暮らしています。BOISSは、生息地の手入れや保全活動を通じて、島の固有トンボ類・ハンミョウ・ハナバチ・ゾウムシを未来へ残す取り組みを続けています。</p>
+<p class="lead">BOISSでは、絶滅の危機に瀕し急激にその数を減らしている「オガサワラハンミョウ」と、小さな環境変異にも影響を受けやすい「小笠原固有のトンボ類」について、島民の有志が中心となり、その保全活動につなげる基礎調査を長年進めてきました。</p>
 </div>
 </section>
 
@@ -132,39 +140,72 @@ footer a{color:var(--paper)}
 <div class="wrap">
 <div class="section-title"><h2>保全している希少昆虫</h2><span class="en">SPECIES</span></div>
 <ul class="species">
-<li><span class="since en">2004〜</span><h3>固有トンボ類</h3></li>
-<li><span class="since en">2015〜</span><h3>オガサワラハンミョウ</h3></li>
+<li><span class="since en">2004〜</span><h3><a href="#dragonfly">固有トンボ類</a></h3></li>
+<li><span class="since en">2015〜</span><h3><a href="#hanmyo">オガサワラハンミョウ</a></h3></li>
 <li><span class="since en">2022〜</span><h3>固有ハナバチ類</h3></li>
 <li><span class="since en">2023〜</span><h3>チチジマヒメカタゾウムシ</h3></li>
 </ul>
 </div>
 </section>
 
-<section class="section">
+<section class="section" id="dragonfly">
 <div class="wrap">
-<div class="section-title"><h2>固有トンボ類の生息地の手入れ</h2><span class="en">HABITAT</span></div>
-<p class="body-text">オガサワラアオイトトンボは、現在では弟島にわずかに生息するのみとなっています。トンボが暮らす水辺を守るため、水辺を覆うシュロガヤツリの刈込みなど、生息地の手入れを行っています。</p>
+<div class="section-title"><h2>小笠原固有トンボ類の保全<span class="since-h en">2004―</span></h2><span class="en">DRAGONFLIES</span></div>
+<p class="body-text">小笠原諸島には5種類の固有トンボが生息していますが、その中でも「オガサワラトンボ」と「オガサワラアオイトトンボ」、「ハナダカトンボ」の3種類は特に個体数が少なく、環境省の保護増殖事業の対象種となっており、さまざまな保全活動が進められています。</p>
+
+<div class="topic">
+<h3>トンボ生息調査</h3>
+<p class="body-text">小笠原固有トンボ類が生息する「兄島」と「弟島」という無人島で、毎年決まった沢を上流から下流までくまなく踏査し、5種類の固有トンボの目撃数を記録しており、その変動を比較検証できるようにしています。（2014－環境省委託事業として受託）</p>
+<div class="triple">
+<figure><div class="photo"><img alt="オガサワラトンボ" loading="lazy" src="images/insect-ogasawaratonbo.jpg"/></div><figcaption>オガサワラトンボ（天然記念物。現在では兄島と弟島のみに生息）</figcaption></figure>
+<figure><div class="photo"><img alt="オガサワラアオイトトンボ" loading="lazy" src="images/insect-aoitotonbo.jpg"/></div><figcaption>オガサワラアオイトトンボ（現在では弟島にわずかに生息するのみ）</figcaption></figure>
+<figure><div class="photo"><img alt="ハナダカトンボ" loading="lazy" src="images/insect-hanadakatonbo.jpg"/></div><figcaption>ハナダカトンボ（天然記念物。兄島と弟島では生息数が比較的安定しているが、母島では激減している）</figcaption></figure>
+</div>
+</div>
+
+<div class="topic">
+<h3>人工トンボ池の設置と整備</h3>
+<div class="split">
+<div>
+<p class="body-text">渇水期のトンボの産卵地確保を目的として、兄島、弟島、西島に、合計約100基の人工トンボ池（大型のプラスチック桶）を設置しています。毎年すべての人工池を周り、プラスチックの劣化具合や割れのチェック、不具合のあった桶の回収・交換、水質悪化を防ぐための枯れ葉除去、トンボの幼虫であるヤゴの利用確認などを行っています。</p>
+<p class="body-text">毎年、止水性の「オガサワラトンボ」や「オガサワラアオイトトンボ」のヤゴが確認できており、その有用性が実証されています。</p>
+</div>
+<figure><div class="photo"><img alt="兄島に設置した人工トンボ池" loading="lazy" src="images/insect-tonbo-pond.jpg"/></div><figcaption>兄島に設置した人工トンボ池</figcaption></figure>
+</div>
+</div>
+
+<div class="topic">
+<h3>シュロガヤツリの駆除</h3>
+<p class="body-text">外来植物の「シュロガヤツリ」が繁茂すると沢の水面を覆いつくしてしまい、トンボの産卵に悪影響を与えているといわれています。そこで、弟島内で特に広範囲にシュロガヤツリが繁茂する沢において、トンボの産卵環境を改善するため、産卵期前に沢周囲のシュロガヤツリの刈込作業を行っています。</p>
+<p class="body-text">手作業の刈込では数カ月で元に戻ってしまいますが、生態系にどのような影響を与えるかわからないので、農薬等を容易に使用することはできません。根本的な解決方法が見つかっておらず、試行錯誤しながら活動しています。</p>
 <div class="figs">
-<figure>
-<div class="ph"><span>PHOTO｜オガサワラアオイトトンボ</span></div>
-<figcaption>写真：オガサワラアオイトトンボ（現在では弟島にわずかに生息するのみ）</figcaption>
-</figure>
-<figure>
 <div class="pair">
-<div class="ph moss"><span>PHOTO｜刈込前</span></div>
-<div class="ph moss"><span>PHOTO｜刈込後</span></div>
+<figure><div class="photo"><img alt="シュロガヤツリが繁茂した刈込前の沢" loading="lazy" src="images/insect-shuro-before.jpg"/></div><figcaption>刈込前（シュロガヤツリが繁茂し、沢がどこか分からない状況）</figcaption></figure>
+<figure><div class="photo"><img alt="刈込後、水面が見えるようになった沢" loading="lazy" src="images/insect-shuro-after.jpg"/></div><figcaption>刈込後（水面が解放された様子）</figcaption></figure>
 </div>
-<figcaption>写真：シュロガヤツリ刈込前後の様子（近景）</figcaption>
-</figure>
-<figure>
 <div class="pair">
-<div class="photo"><img alt="シュロガヤツリが茂る水辺で刈込み作業をするメンバー" loading="lazy" src="images/insect-work-01.jpg"/></div>
-<div class="photo"><img alt="水路に入り、刈り取った草をシートにまとめるメンバー" loading="lazy" src="images/insect-work-02.jpg"/></div>
+<figure><div class="photo"><img alt="シュロガヤツリが茂る水辺で刈込み作業をするメンバー" loading="lazy" src="images/insect-work-01.jpg"/></div><figcaption>作業風景</figcaption></figure>
+<figure><div class="photo"><img alt="水路に入り、刈り取った草をシートにまとめるメンバー" loading="lazy" src="images/insect-work-02.jpg"/></div><figcaption>作業風景</figcaption></figure>
 </div>
-<figcaption>写真：作業風景</figcaption>
-</figure>
 </div>
 <p class="funding">※この活動の一部はGGG（公益社団法人 ゴルフ緑化促進会）様の国立・国定公園支援事業（令和2〜4年度）と、公益財団法人 公益推進協会様の自然公園等保護基金（令和5年度）を活用させていただいております。</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="hanmyo">
+<div class="wrap">
+<div class="section-title"><h2>オガサワラハンミョウの保全<span class="since-h en">2015―</span></h2><span class="en">TIGER BEETLE</span></div>
+<div class="split">
+<div>
+<p class="body-text">兄島にのみ生息するオガサワラハンミョウの数は減少傾向にありますが、その原因は明確になっていません。環境省では、父島の世界遺産センター内で人工繁殖させた個体を兄島に移植する取り組みも進めています。BOISSでは長年、兄島でのオガサワラハンミョウの現地調査に関わっており、集めた情報が生息域外および域内での保全に役立てられています。</p>
+<div class="topic" style="margin-top:12px">
+<h3>巣穴確認による生息数記録</h3>
+<p class="body-text">毎年、成虫の活動期を終えた冬に、生息地において幼虫の巣穴数を記録しています。</p>
+</div>
+</div>
+<figure><div class="photo"><img alt="オガサワラハンミョウ" loading="lazy" src="images/insect-hanmyo.jpg"/></div><figcaption>オガサワラハンミョウ（天然記念物。現在では兄島の限られた場所でのみ生息）</figcaption></figure>
+</div>
 </div>
 </section>
 
