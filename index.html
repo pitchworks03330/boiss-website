@@ -1136,7 +1136,7 @@ body{--scroll-y:0}
 <div class="form-field"><label for="period">希望時期</label><input id="period" name="希望時期" placeholder="例：2027年6月頃"/></div>
 <div class="form-field"><label for="place">希望場所・島</label><input id="place" name="希望場所・島" placeholder="未定でも構いません"/></div>
 <div class="form-field full"><label for="message">ご相談内容 *</label><textarea id="message" name="ご相談内容" placeholder="目的、実施したいこと、検討中の内容などをご記入ください。企画が固まっていなくても構いません。" required=""></textarea><span class="form-help">内容・人数・実施場所に応じて個別にご提案します。</span></div>
-<div class="form-actions"><button class="form-submit" type="submit">小笠原での連携を相談する <span>→</span></button><a class="form-mail" href="mailto:info@ogasawara-boiss.jp">メールアプリから直接送る</a></div>
+<div class="form-actions"><button class="form-submit" type="submit">小笠原での連携を相談する <span>→</span></button><a class="form-mail" href="mailto:info@ogasawara-boiss.jp?cc=jun_minamide%40ogasawara-boiss.jp">メールアプリから直接送る</a></div>
 <p class="form-help" id="form-note" style="grid-column:1/-1;margin:0">送信するとメールアプリが開き、入力内容が本文に入った状態になります。そのまま送信してください。</p>
 </form>
 <p class="form-help" style="margin:16px 0 0">送信内容はBOISSのお問い合わせとして受け付けます。お急ぎの場合は info@ogasawara-boiss.jp へ直接ご連絡ください。</p>
@@ -1582,7 +1582,7 @@ body{--scroll-y:0}
 <script>
 (function(){
 var f=document.getElementById('inquiry-form'); if(!f) return;
-var TO='info@ogasawara-boiss.jp';
+var TO='info@ogasawara-boiss.jp', CC='jun_minamide@ogasawara-boiss.jp';
 f.addEventListener('submit',function(e){
   e.preventDefault();
   var bot=f.querySelector('[name="bot-field"]'); if(bot&&bot.value) return;
@@ -1590,7 +1590,7 @@ f.addEventListener('submit',function(e){
   ['会社・団体名','お名前','メールアドレス','電話番号','ご相談の種類','人数・規模','希望時期','希望場所・島'].forEach(function(n){lines.push('■'+n+'：'+(get(n)||'—'));});
   lines.push('','■ご相談内容',get('ご相談内容'));
   var subject='【ご相談】'+(get('ご相談の種類')||'お問い合わせ')+'／'+(get('会社・団体名')||get('お名前'));
-  location.href='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+  location.href='mailto:'+TO+'?cc='+encodeURIComponent(CC)+'&subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
   var note=document.getElementById('form-note'); if(note){note.textContent='メールアプリを開きました。送信まで完了したらお問い合わせ完了です。開かない場合は '+TO+' へ直接お送りください。';note.style.color='#1A7A43';note.style.fontWeight='700';}
 });
 })();

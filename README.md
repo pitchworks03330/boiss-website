@@ -14,4 +14,4 @@
 
 ## お問い合わせフォーム
 GitHub Pages ではフォーム送信を受け取れないため、送信ボタンでメールアプリが開き、
-入力内容が本文に入る方式にしています（宛先: info@ogasawara-boiss.jp）。
+入力内容が本文に入る方式にしています（宛先: info@ogasawara-boiss.jp、CC: jun_minamide@ogasawara-boiss.jp）。
