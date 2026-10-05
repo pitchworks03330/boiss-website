@@ -93,18 +93,16 @@ footer a{color:var(--paper)}
 .sp-table td.dist{min-width:96px}
 .sp-table tbody tr:last-child td,.sp-table tbody tr:last-child th{border-bottom:0}
 .table-note{display:none;font-size:12px;color:var(--muted);margin:8px 0 0}
-.ph{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:#6E7F42;display:flex;align-items:center;justify-content:center}
-.ph::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 16px)}
-.ph span{position:relative;font-size:12px;letter-spacing:.08em;color:#fff;background:rgba(19,26,56,.8);padding:6px 10px;border-radius:3px}
-.ph.forest{background:#3F6A4A}.ph.sand{background:#A98B60}
 .maker{color:#C98A12}
+.photo.tall img{aspect-ratio:3/4}
+.product .photo{border-radius:0}
+.brand-logo{display:block;width:120px;height:auto;margin:0 0 24px}
 .benefits{margin:0 0 24px;padding:24px 28px;background:#fff;border:1px solid var(--line);border-radius:6px;list-style:none;display:grid;gap:10px;font-size:15px;line-height:1.8}
 .benefits li{position:relative;padding-left:22px}
 .benefits li::before{content:"";position:absolute;left:2px;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--green)}
 .product-band{margin:56px 0 28px;padding:18px;border-radius:6px;background:#8FD9B6;color:var(--ink);text-align:center;font-size:24px;font-weight:800;letter-spacing:.04em}
 .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .product{background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 0 22px;overflow:hidden;display:flex;flex-direction:column}
-.product .ph{border-radius:0}
 .product h3{margin:20px 22px 12px;font-size:17px;line-height:1.5}
 .price{margin:0 22px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px;line-height:1.6}
 .price dt{color:var(--muted)}
@@ -164,6 +162,7 @@ footer a{color:var(--paper)}
 <span class="en label">LOCAL PRODUCTION</span>
 </div>
 <h1 class="min">地産地消</h1>
+<img alt="Awapuhi Water 小笠原天然月桃蒸留水 Made in Ogasawara 100% natural" class="brand-logo" src="images/chisan-logo.png"/>
 <p class="lead"><span class="maker">「あろうはぽの」</span>が作る蒸留月桃水。小笠原の太陽と月のパワーをたっぷり浴びた月桃の葉や茎から、100%無添加の蒸留水をつくっています。</p>
 </div>
 </section>
@@ -176,7 +175,7 @@ footer a{color:var(--paper)}
 <p class="body-text">月桃は、ショウガ科ハナショウガ属（アルピニア属）の多年草です。原産地は東南アジアで、常緑多年草に分類されます。沖縄県や九州、海外では台湾やインドなど亜熱帯の南アジアに分布する多年草植物として有名で、独特の香りが特徴です。寒さに弱く、亜熱帯に群生しています。</p>
 <p class="body-text">月桃は独特の芳香をもち、世界にある芳香植物164種類の中のひとつに数えられているほど、香りの豊かな植物です。月桃が放つ独特の芳香は、気持ちをリラックスさせたり、心地よく毎日を過ごすのに大変役立ちます。</p>
 </div>
-<figure><div class="ph forest"><span>PHOTO｜月桃の花</span></div></figure>
+<figure><div class="photo"><img alt="月桃の花" loading="lazy" src="images/chisan-gettou-flower.jpg"/></div><figcaption>月桃の花</figcaption></figure>
 </div>
 <p class="body-text">月桃の葉には殺菌、消毒、消臭効果があり、消臭剤や防虫剤としても重宝されています。楕円形の葉に含まれる独特の芳香成分には防虫・抗菌作用があり、殺菌・消毒効果があります。さらに防虫、防菌、防カビの効果から、虫よけやカビよけとしても使用されています。</p>
 <p class="body-text">この効能を活かして、お茶や虫よけスプレーに加工されるほか、葉のエキスには肌の弾力を保つコラーゲンの合成を促進する作用もあるとして、化粧水や美容液にも配合されます。</p>
@@ -201,15 +200,15 @@ footer a{color:var(--paper)}
 <div class="section-title"><h2>小笠原の太陽と月のパワーをたっぷり浴びた月桃の葉や茎から作る100%無添加蒸留水</h2></div>
 <p class="body-text">全て手作業で丁寧に行っています。<br/>一枚一枚丁寧に葉を洗い、拭き上げ、葉の裁断、昔ながらの蒸留機にて丁寧に時間をかけて月桃蒸留水を作っています。</p>
 <div class="triple">
-<figure><div class="ph forest"><span>PHOTO｜月桃</span></div><figcaption>背丈よりも成長する月桃</figcaption></figure>
-<figure><div class="ph"><span>PHOTO｜Awapuhi Water</span></div><figcaption>Awapuhi Water</figcaption></figure>
-<figure><div class="ph sand"><span>PHOTO｜蒸留機</span></div><figcaption>昔ながらの蒸留機</figcaption></figure>
+<figure><div class="photo tall"><img alt="軽トラックの背丈よりも大きく育った月桃" loading="lazy" src="images/chisan-gettou.jpg"/></div><figcaption>背丈よりも成長する月桃</figcaption></figure>
+<figure><div class="photo tall"><img alt="海辺に並べたAwapuhi Waterのボトルとスプレー" loading="lazy" src="images/chisan-bottles.jpg"/></div><figcaption>Awapuhi Water</figcaption></figure>
+<figure><div class="photo tall"><img alt="銅製の昔ながらの蒸留機" loading="lazy" src="images/chisan-still.jpg"/></div><figcaption>昔ながらの蒸留機</figcaption></figure>
 </div>
 
 <div class="product-band en">Awapuhi Water</div>
 <div class="products">
 <article class="product">
-<div class="ph"><span>PHOTO｜50ml スプレー</span></div>
+<div class="photo tall"><img alt="Awapuhi Water 50ml スプレータイプ" loading="lazy" src="images/chisan-spray50.jpg"/></div>
 <h3>50ml入り　スプレータイプ</h3>
 <dl class="price">
 <dt>通常価格</dt><dd>800円</dd>
@@ -218,7 +217,7 @@ footer a{color:var(--paper)}
 </dl>
 </article>
 <article class="product">
-<div class="ph"><span>PHOTO｜100ml</span></div>
+<div class="photo tall"><img alt="Awapuhi Water 100ml ボトル" loading="lazy" src="images/chisan-bottle100.jpg"/></div>
 <h3>100ml入り（グリセリン付）</h3>
 <dl class="price">
 <dt>通常価格</dt><dd>1,300円</dd>
@@ -227,7 +226,7 @@ footer a{color:var(--paper)}
 </dl>
 </article>
 <article class="product">
-<div class="ph"><span>PHOTO｜詰め替え用</span></div>
+<div class="photo tall"><img alt="Awapuhi Water 詰め替え用パウチ" loading="lazy" src="images/chisan-refill.jpg"/></div>
 <h3>詰め替え用</h3>
 <dl class="price">
 <dt>100ml入り</dt><dd>800円</dd>
