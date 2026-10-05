@@ -4,6 +4,13 @@
 <head>
 <meta content="noindex,nofollow" name="robots"/>
 <meta charset="utf-8"/>
+<script>
+/* 旧サイト（WordPress）のURL ?page_id=○○ を新しいページへ案内 */
+(function(){var q=location.search;if(!/[?&](page_id|p|cat)=/.test(q))return;
+var m=q.match(/[?&]page_id=(\d+)/),id=m&&m[1];
+var map={'9':'./#about','22':'./#activities','30':'chisan.html','32':'./#contact','38':'./#supporters','396':'insects.html#dragonfly','425':'insects.html#zoumushi'};
+location.replace((id&&map[id])||'./');})();
+</script>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>特定非営利活動法人 小笠原海洋島研究会（BOISS）</title>
 <meta name="description" content="小笠原諸島・父島を拠点に、海ごみの回収・調査、固有の希少昆虫の保全、子どもたちへの環境教育に取り組むNPO法人。企業・行政・学校との協働プロジェクトのご相談を受け付けています。">
@@ -883,7 +890,7 @@ body{--scroll-y:0}
 <a class="case-mini motion-reveal" href="#projects"><span class="case-type">UNIVERSITY × RESEARCH</span><strong>帝京科学大学 × 宮之浜</strong><span>ビーチクリーンとマイクロプラスチック回収を組み合わせたフィールド実習。</span></a>
 <a class="case-mini motion-reveal" href="#projects"><span class="case-type">SCHOOL × EDUCATION</span><strong>小笠原中学校 × 環境学習</strong><span>「海ごみの行方」をテーマに、学習・発信・フィールドでの回収をつなぐプログラム。</span></a>
 </div>
-</section><section class="supporters-section" style="padding:0 0 120px; display:flex; flex-direction:column; gap:20px; overflow:hidden">
+</section><section class="supporters-section" id="supporters" style="padding:0 0 120px; display:flex; flex-direction:column; gap:20px; overflow:hidden">
 <style>
 .supporters-section .supporters-heading{padding:0 80px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 .supporters-section .supporters-note{font-size:12px;line-height:1.7;color:#777064;letter-spacing:.03em}
