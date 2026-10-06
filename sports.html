@@ -160,6 +160,13 @@ footer a{color:var(--paper)}
 p,figcaption,h2,h3{text-wrap:pretty}
 .split.mid{align-items:center}
 .split.mid .body-text:last-child{margin-bottom:0}
+
+/* subtle motion */
+.js-motion .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js-motion .rv.in{opacity:1;transform:none}
+.photo img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+figure:hover .photo img{transform:scale(1.025)}
+@media (prefers-reduced-motion:reduce){.js-motion .rv{opacity:1;transform:none;transition:none}.photo img,.sp-thumb img{transition:none!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -270,5 +277,16 @@ p,figcaption,h2,h3{text-wrap:pretty}
 <div class="f-bottom"><a href="index.html" style="text-decoration:none">← トップページへ</a><span class="en">© Bonin Oceanic Island Studies Society (BOISS)</span></div>
 </div>
 </footer>
+<script>
+(function(){
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var els=document.querySelectorAll('.section-title,.topic>h3,.split,.triple,.pair,.act-grid>*,.species>li,.table-fig,.record>li,.products>*,.benefits,.hero-photo');
+if(!els.length)return;
+document.documentElement.classList.add('js-motion');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(el,i){el.classList.add('rv');var sib=el.parentElement&&el.parentElement.children;if(sib&&sib.length>1&&/act-grid|species|products/.test(el.parentElement.className)){el.style.transitionDelay=(Array.prototype.indexOf.call(sib,el)%4*80)+'ms';}io.observe(el);});
+setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},4000);
+})();
+</script>
 </body>
 </html>
