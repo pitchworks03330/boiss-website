@@ -126,6 +126,56 @@ footer a{color:var(--paper)}
   .back{padding-bottom:80px}
   .table-note{display:block}
 }
+
+/* v2 layout */
+p,figcaption,.sp-name,h2,h3{text-wrap:pretty}
+.species{gap:16px}
+.species li{padding:0;border:0;background:none}
+.sp-card{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .25s,box-shadow .25s,border-color .25s}
+.sp-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(19,26,56,.10);border-color:#C9BFA9;color:var(--ink)}
+.sp-thumb{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.sp-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.sp-card:hover .sp-thumb img{transform:scale(1.04)}
+.sp-body{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 8px;padding:16px 18px 18px}
+.sp-body .since{font-size:12px;font-weight:800;color:var(--green);letter-spacing:.08em}
+.sp-name{grid-column:1/-1;font-size:16px;font-weight:700;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
+.sp-go{color:var(--green);font-weight:700;transition:transform .25s}
+.sp-card:hover .sp-go{transform:translateX(3px)}
+.split{gap:48px}
+.split.mid{align-items:center}
+.split.mid .body-text:last-child,.split.long .body-text:last-child{margin-bottom:0}
+.split.long>figure,.split.long>.fig-stack{position:sticky;top:112px}
+.fig-stack{display:grid;gap:20px}
+.act-head{margin-top:64px}
+.act-title{margin:0 0 20px;font-size:20px;line-height:1.5;padding-left:14px;border-left:4px solid var(--green)}
+.act-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.act-card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.act-card figure{margin:0}
+.act-card .photo{border-radius:0}
+.act-card figcaption{margin:0;padding:8px 18px 0;font-size:12px}
+.act-card h3{margin:10px 18px 8px;font-size:17px;line-height:1.5}
+.act-card p{margin:0 18px 22px;font-size:14px;line-height:1.95}
+.sp-table{table-layout:fixed;min-width:960px}
+.sp-table col.c-grp{width:23%}
+.sp-table col.c-ja{width:25%}
+.sp-table col.c-dist{width:14%}
+.sp-table td.ja{white-space:nowrap}
+.sp-table tbody th{width:auto}
+.sp-table td.sci{word-break:normal;overflow-wrap:break-word}
+.sp-table td.dist{min-width:0;word-break:keep-all;overflow-wrap:anywhere}
+@media(max-width:960px){
+  .act-grid{grid-template-columns:1fr 1fr}
+  .split.long>figure,.split.long>.fig-stack{position:static}
+}
+@media(max-width:768px){
+  .species{grid-template-columns:1fr 1fr;gap:10px}
+  .sp-body{padding:12px 12px 14px}
+  .sp-name{font-size:14px}
+  .act-grid{grid-template-columns:1fr;gap:16px}
+  .act-head{margin-top:44px}
+  .split{gap:20px}
+  .fig-stack{gap:14px}
+}
 </style>
 </head>
 <body>
@@ -157,10 +207,10 @@ footer a{color:var(--paper)}
 <div class="wrap">
 <div class="section-title"><h2>保全している希少昆虫</h2><span class="en">SPECIES</span></div>
 <ul class="species">
-<li><span class="since en">2004〜</span><h3><a href="#dragonfly">固有トンボ類</a></h3></li>
-<li><span class="since en">2015〜</span><h3><a href="#hanmyo">オガサワラハンミョウ</a></h3></li>
-<li><span class="since en">2022〜</span><h3><a href="#hanabachi">固有ハナバチ類</a></h3></li>
-<li><span class="since en">2023〜</span><h3><a href="#zoumushi">チチジマヒメカタゾウムシ</a></h3></li>
+<li><a class="sp-card" href="#dragonfly"><span class="sp-thumb"><img alt="" loading="lazy" src="images/insect-ogasawaratonbo.jpg"/></span><span class="sp-body"><span class="since en">2004〜</span><span class="sp-go" aria-hidden="true">→</span><span class="sp-name">固有トンボ類</span></span></a></li>
+<li><a class="sp-card" href="#hanmyo"><span class="sp-thumb"><img alt="" loading="lazy" src="images/insect-hanmyo.jpg"/></span><span class="sp-body"><span class="since en">2015〜</span><span class="sp-go" aria-hidden="true">→</span><span class="sp-name">オガサワラハンミョウ</span></span></a></li>
+<li><a class="sp-card" href="#hanabachi"><span class="sp-thumb"><img alt="" loading="lazy" src="images/insect-kumabachi.jpg"/></span><span class="sp-body"><span class="since en">2022〜</span><span class="sp-go" aria-hidden="true">→</span><span class="sp-name">固有ハナバチ類</span></span></a></li>
+<li><a class="sp-card" href="#zoumushi"><span class="sp-thumb"><img alt="" loading="lazy" src="images/insect-chichijima-zoumushi.jpg"/></span><span class="sp-body"><span class="since en">2023〜</span><span class="sp-go" aria-hidden="true">→</span><span class="sp-name">チチジマヒメカタゾウムシ</span></span></a></li>
 </ul>
 </div>
 </section>
@@ -182,7 +232,7 @@ footer a{color:var(--paper)}
 
 <div class="topic">
 <h3>人工トンボ池の設置と整備</h3>
-<div class="split">
+<div class="split mid">
 <div>
 <p class="body-text">渇水期のトンボの産卵地確保を目的として、兄島、弟島、西島に、合計約100基の人工トンボ池（大型のプラスチック桶）を設置しています。毎年すべての人工池を周り、プラスチックの劣化具合や割れのチェック、不具合のあった桶の回収・交換、水質悪化を防ぐための枯れ葉除去、トンボの幼虫であるヤゴの利用確認などを行っています。</p>
 <p class="body-text">毎年、止水性の「オガサワラトンボ」や「オガサワラアオイトトンボ」のヤゴが確認できており、その有用性が実証されています。</p>
@@ -213,38 +263,23 @@ footer a{color:var(--paper)}
 <section class="section" id="hanmyo">
 <div class="wrap">
 <div class="section-title"><h2>オガサワラハンミョウの保全<span class="since-h en">2015―</span></h2><span class="en">TIGER BEETLE</span></div>
-<div class="split">
+<div class="split long">
 <div>
 <p class="body-text">小笠原諸島の無人島である兄島にのみ生息するオガサワラハンミョウの数は減少傾向にありますが、その原因は明確になっていません。BOISSでは2015年から環境省と協力して生息数調査を行っており、本種が減少していく様子を目の当たりにして悔しい思いを経験しています。</p>
 <p class="body-text">これまで、本種の生息地が本土から遠く離れた離島の無人島という特殊な生息環境であるため、研究を深めることが難しく、その知見不足が長年の課題となっていました。兄島での生息数減少に歯止めが利かない中、BOISS主体で、研究者の協力を得つつ、兄島での生態調査活動を2023年度から開始しました。絶滅危惧種の中でも特に絶滅リスクの高い種なので、関係行政機関やその他関係者などと情報共有を丁寧に行いながら慎重に活動を行っています。未だ調査の途中ではありますが、野生下において幼虫が何を食べているのかを解明するなど、一定の成果を上げており、この成果が新たな保全策の立案に役立てられています。</p>
 <p class="body-text">その他にも、環境省では、父島の世界遺産センター内で人工繁殖させた個体を兄島に移植する取り組みも進めています。私たちは、過去生息の記録があるが、いなくなってしまった場所などをそれらの移植候補地として活用するために、繁茂した外来植物の駆除や、雨水などで流失した環境を再生する生息環境改善活動も進めています。</p>
 </div>
+<div class="fig-stack">
 <figure><div class="photo"><img alt="オガサワラハンミョウ" loading="lazy" src="images/insect-hanmyo.jpg"/></div><figcaption>オガサワラハンミョウ（天然記念物。現在では兄島の限られた場所でのみ生息）</figcaption></figure>
-</div>
-
-<div class="topic">
-<h3>巣穴確認による生息数記録</h3>
-<p class="body-text">毎年、成虫の活動期を終えた冬に、生息地において幼虫の巣穴数を記録しています。</p>
-<div class="pair figs">
-<figure><div class="photo"><img alt="兄島の生息地でしゃがみこんで生息数調査をする調査員たち" loading="lazy" src="images/insect-hanmyo-survey.jpg"/></div><figcaption>生息数調査の様子</figcaption></figure>
 <figure><div class="photo"><img alt="地面にあいたオガサワラハンミョウの幼虫の小さな巣穴" loading="lazy" src="images/insect-hanmyo-burrow.jpg"/></div><figcaption>オガサワラハンミョウの巣穴</figcaption></figure>
 </div>
 </div>
 
-<div class="topic">
-<h3>長時間カメラによる基礎生態調査</h3>
-<div class="split">
-<p class="body-text">無人島でも最大10日間ほど連続で撮影できる長時間カメラを用いて、主に幼虫の撮影を行い、どのような生態をしているのか調査を行っています。</p>
-<figure><div class="photo"><img alt="兄島の生息地で日よけの下に長時間カメラを設置する調査員" loading="lazy" src="images/insect-hanmyo-camera.jpg"/></div><figcaption>撮影機材設営の様子</figcaption></figure>
-</div>
-</div>
-
-<div class="topic">
-<h3>生息環境改善活動</h3>
-<div class="split">
-<p class="body-text">荒廃した環境を、オガサワラハンミョウが生息できる環境に整備しています。</p>
-<figure><div class="photo"><img alt="荒れた斜面で外来植物を取り除き、生息環境を整備するメンバー" loading="lazy" src="images/insect-hanmyo-habitat.jpg"/></div><figcaption>整備の様子</figcaption></figure>
-</div>
+<div class="act-head"><h3 class="act-title">主な活動</h3></div>
+<div class="act-grid">
+<article class="act-card"><figure><div class="photo"><img alt="兄島の生息地でしゃがみこんで生息数調査をする調査員たち" loading="lazy" src="images/insect-hanmyo-survey.jpg"/></div><figcaption>生息数調査の様子</figcaption></figure><h3>巣穴確認による生息数記録</h3><p>毎年、成虫の活動期を終えた冬に、生息地において幼虫の巣穴数を記録しています。</p></article>
+<article class="act-card"><figure><div class="photo"><img alt="兄島の生息地で日よけの下に長時間カメラを設置する調査員" loading="lazy" src="images/insect-hanmyo-camera.jpg"/></div><figcaption>撮影機材設営の様子</figcaption></figure><h3>長時間カメラによる基礎生態調査</h3><p>無人島でも最大10日間ほど連続で撮影できる長時間カメラを用いて、主に幼虫の撮影を行い、どのような生態をしているのか調査を行っています。</p></article>
+<article class="act-card"><figure><div class="photo"><img alt="荒れた斜面で外来植物を取り除き、生息環境を整備するメンバー" loading="lazy" src="images/insect-hanmyo-habitat.jpg"/></div><figcaption>整備の様子</figcaption></figure><h3>生息環境改善活動</h3><p>荒廃した環境を、オガサワラハンミョウが生息できる環境に整備しています。</p></article>
 </div>
 
 <p class="funding">※この活動の一部は、環境省生物多様性保全推進交付金（令和7～9年）、公益財団法人 自然保護助成基金様の第34期プロ・ナトゥーラ・ファンド助成（令和5年度）を活用させていただいております。</p>
@@ -257,7 +292,7 @@ footer a{color:var(--paper)}
 <div class="section-title"><h2>身近な固有ハナバチ類の保全<span class="since-h en">2022―</span></h2><span class="en">WILD BEES</span></div>
 <div class="topic" style="margin-top:0">
 <h3>固有ハナバチ類とは</h3>
-<div class="split">
+<div class="split mid">
 <p class="body-text">小笠原には9種類の固有ハナバチ類が生息しています。小笠原で独特の進化をした固有植物たちの受粉には、固有昆虫の存在が大きく関係していると言われており、固有ハナバチ類もその一翼を担っています。セイヨウミツバチのような集団で生息する種ではなく単独で生活しており、集めた花粉をハチミツに変化させて貯蔵する性質もないため、人との関わりは薄いですが在来の植物たちにとっては大切なパートナーであり、小笠原の生態系にとっては非常に重要な存在です。</p>
 <figure><div class="photo"><img alt="花にとまるオガサワラクマバチ" loading="lazy" src="images/insect-kumabachi.jpg"/></div><figcaption>オガサワラクマバチ（固有ハナバチ）</figcaption></figure>
 </div>
@@ -290,29 +325,30 @@ footer a{color:var(--paper)}
 <figure class="table-fig">
 <div class="table-scroll">
 <table class="sp-table">
+<colgroup><col class="c-grp"/><col class="c-ja"/><col class="c-sci"/><col class="c-dist"/></colgroup>
 <thead><tr><th scope="col">種群仮称</th><th scope="col">標準和名</th><th scope="col">学名</th><th scope="col">分布（島）</th></tr></thead>
 <tbody>
-<tr><th rowspan="1" scope="rowgroup">ミナミイオウヒメカタゾウムシ</th><td>ミナミイオウヒメカタゾウムシ</td><td class="sci"><i>Satozo minamiiwoensis</i></td><td class="dist">南硫黄島</td></tr>
-<tr><th rowspan="3" scope="rowgroup">オガサワラヒメカタゾウムシ<br>（ツチヒメカタゾウムシ類）</th><td>ハハジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>nomurai</i></td><td class="dist">母島</td></tr>
-<tr><td>チチジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>kishimotoi kishimotoi</i></td><td class="dist">父島</td></tr>
-<tr><td>オトウトジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>kishimotoi otohtojimanus</i></td><td class="dist">弟島</td></tr>
-<tr><th rowspan="11" scope="rowgroup">オガサワラヒメカタゾウムシ<br>（オガサワラヒメカタゾウムシ類）</th><td>ムコウジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>makiharai</i></td><td class="dist">向島</td></tr>
-<tr><td>ムコジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>matsumotoi</i></td><td class="dist">聟島</td></tr>
-<tr><td>アネジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>anejimaensis</i></td><td class="dist">姉島</td></tr>
-<tr><td>ハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater mater</i></td><td class="dist">母島</td></tr>
-<tr><td>ハイイロハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater griseus</i></td><td class="dist">母島</td></tr>
-<tr><td>キアシハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater rufipes</i></td><td class="dist">母島</td></tr>
-<tr><td>クロアシメダカヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>hahajimaensis hahajimaensis</i></td><td class="dist">母島</td></tr>
-<tr><td>キアシメダカヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>hahajimaensis sekimonensis</i></td><td class="dist">母島</td></tr>
-<tr><td>チチジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus rugosicephalus</i></td><td class="dist">父島、兄島</td></tr>
-<tr><td>オトウトジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus otohtojimaensis</i></td><td class="dist">弟島</td></tr>
-<tr><td>チンペイヤマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus chinpeiyamaensis</i></td><td class="dist">母島</td></tr>
-<tr><th rowspan="6" scope="rowgroup">スジヒメカタゾウムシ類</th><td>アニジマハダカスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo kawashitai</i></td><td class="dist">兄島</td></tr>
-<tr><td>ミナミイオウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo minamiiwoensis</i></td><td class="dist">南硫黄島</td></tr>
-<tr><td>キタイオウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo karubei</i></td><td class="dist">北硫黄島</td></tr>
-<tr><td>ダイトウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo daitoensis</i></td><td class="dist">南北大東島</td></tr>
-<tr><td>トリシマスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo watanabei</i></td><td class="dist">鳥島</td></tr>
-<tr><td>スジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo lineatus</i></td><td class="dist">父島、聟島、西島、母島、南島、向島</td></tr>
+<tr><th rowspan="1" scope="rowgroup">ミナミイオウヒメカタゾウムシ</th><td class="ja">ミナミイオウヒメカタゾウムシ</td><td class="sci"><i>Satozo minamiiwoensis</i></td><td class="dist">南硫黄島</td></tr>
+<tr><th rowspan="3" scope="rowgroup">オガサワラヒメカタゾウムシ<br>（ツチヒメカタゾウムシ類）</th><td class="ja">ハハジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>nomurai</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">チチジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>kishimotoi kishimotoi</i></td><td class="dist">父島</td></tr>
+<tr><td class="ja">オトウトジマツチヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazodes</i>) <i>kishimotoi otohtojimanus</i></td><td class="dist">弟島</td></tr>
+<tr><th rowspan="11" scope="rowgroup">オガサワラヒメカタゾウムシ<br>（オガサワラヒメカタゾウムシ類）</th><td class="ja">ムコウジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>makiharai</i></td><td class="dist">向島</td></tr>
+<tr><td class="ja">ムコジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>matsumotoi</i></td><td class="dist">聟島</td></tr>
+<tr><td class="ja">アネジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>anejimaensis</i></td><td class="dist">姉島</td></tr>
+<tr><td class="ja">ハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater mater</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">ハイイロハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater griseus</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">キアシハハジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>mater rufipes</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">クロアシメダカヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>hahajimaensis hahajimaensis</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">キアシメダカヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>hahajimaensis sekimonensis</i></td><td class="dist">母島</td></tr>
+<tr><td class="ja">チチジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus rugosicephalus</i></td><td class="dist">父島、兄島</td></tr>
+<tr><td class="ja">オトウトジマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus otohtojimaensis</i></td><td class="dist">弟島</td></tr>
+<tr><td class="ja">チンペイヤマヒメカタゾウムシ</td><td class="sci"><i>Ogasawarazo</i> (<i>Ogasawarazo</i>) <i>rugosicephalus chinpeiyamaensis</i></td><td class="dist">母島</td></tr>
+<tr><th rowspan="6" scope="rowgroup">スジヒメカタゾウムシ類</th><td class="ja">アニジマハダカスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo kawashitai</i></td><td class="dist">兄島</td></tr>
+<tr><td class="ja">ミナミイオウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo minamiiwoensis</i></td><td class="dist">南硫黄島</td></tr>
+<tr><td class="ja">キタイオウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo karubei</i></td><td class="dist">北硫黄島</td></tr>
+<tr><td class="ja">ダイトウスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo daitoensis</i></td><td class="dist">南北大東島</td></tr>
+<tr><td class="ja">トリシマスジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo watanabei</i></td><td class="dist">鳥島</td></tr>
+<tr><td class="ja">スジヒメカタゾウムシ</td><td class="sci"><i>Torishimazo lineatus</i></td><td class="dist">父島、聟島、西島、母島、南島、向島</td></tr>
 </tbody>
 </table>
 </div>
@@ -322,7 +358,7 @@ footer a{color:var(--paper)}
 </div>
 <div class="topic">
 <h3>局所的グリーンアノール対策保護ネットの試作</h3>
-<div class="split">
+<div class="split long">
 <div>
 <p class="body-text">チチジマヒメカタゾウムシは、かつては父島全域に生息していましたが、現在は山域の極めて限られた地域にのみ残存しています。</p>
 <p class="body-text">本種は幼虫の間は地中で過ごし、5月から8月の間に成虫として地上で活動しますが、利用する食樹が限定されており、活動範囲も小さいです。昼夜を問わず活動することが分かっており、そのことが絶滅を免れている要因だと考えられていますが、専門家の調査によると父島での確認数は年々減少していることが分かっています。</p>
