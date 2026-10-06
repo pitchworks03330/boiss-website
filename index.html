@@ -8,7 +8,7 @@
 /* 旧サイト（WordPress）のURL ?page_id=○○ を新しいページへ案内 */
 (function(){var q=location.search;if(!/[?&](page_id|p|cat)=/.test(q))return;
 var m=q.match(/[?&]page_id=(\d+)/),id=m&&m[1];
-var map={'9':'./#about','22':'./#activities','30':'chisan.html','32':'./#contact','38':'./#supporters','396':'insects.html#dragonfly','425':'insects.html#zoumushi'};
+var map={'9':'./#about','22':'./#activities','30':'chisan.html','32':'./#contact','38':'./#supporters','396':'insects.html#dragonfly','412':'insects.html#hanmyo','425':'insects.html#zoumushi'};
 location.replace((id&&map[id])||'./');})();
 </script>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
