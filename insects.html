@@ -6,6 +6,15 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>希少昆虫の保全｜特定非営利活動法人 小笠原海洋島研究会（BOISS）</title>
 <meta name="description" content="小笠原の固有トンボ類・オガサワラハンミョウ・固有ハナバチ類・チチジマヒメカタゾウムシなど、希少昆虫の保全に取り組むBOISSの活動を紹介します。">
+<link rel="canonical" href="https://ogasawara-boiss.jp/insects.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="特定非営利活動法人 小笠原海洋島研究会（BOISS）">
+<meta property="og:title" content="希少昆虫の保全｜特定非営利活動法人 小笠原海洋島研究会（BOISS）">
+<meta property="og:description" content="小笠原の固有トンボ類・オガサワラハンミョウ・固有ハナバチ類・チチジマヒメカタゾウムシなど、希少昆虫の保全に取り組むBOISSの活動を紹介します。">
+<meta property="og:url" content="https://ogasawara-boiss.jp/insects.html">
+<meta property="og:image" content="https://ogasawara-boiss.jp/images/insect-hanmyo.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -22,10 +31,6 @@ img{max-width:100%}
 .wrap{max-width:1120px;margin:0 auto;padding:0 48px}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 48px;background:rgba(243,239,230,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
-.site-header img{height:56px;width:auto;display:block}
-.site-header nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
-.site-header nav a{text-decoration:none;color:var(--ink);white-space:nowrap}
 .btn-dark{background:var(--ink);color:var(--paper)!important;padding:12px 20px;border-radius:999px}
 
 /* hero */
@@ -104,10 +109,6 @@ footer a{color:var(--paper)}
 }
 @media(max-width:768px){
   .wrap{padding:0 16px}
-  .site-header{padding:12px 16px}
-  .site-header img{height:42px}
-  .site-header nav .hide-sp{display:none}
-  .site-header nav{gap:12px;font-size:13px}
   .btn-dark{padding:10px 14px}
   .hero{padding:56px 0 40px}
   .crumb{margin-bottom:28px}
@@ -184,18 +185,87 @@ p,figcaption,.sp-name,h2,h3{text-wrap:pretty}
 .photo img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 figure:hover .photo img{transform:scale(1.025)}
 @media (prefers-reduced-motion:reduce){.js-motion .rv{opacity:1;transform:none;transition:none}.photo img,.sp-thumb img{transition:none!important;transform:none!important}}
+
+/* global header / menu / footer (shared with top page look) */
+.g-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 48px;background:rgba(243,239,230,.94);border-bottom:1px solid #D9D1BF;backdrop-filter:blur(6px)}
+.g-logo img{height:56px;width:auto;display:block}
+.g-nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
+.g-link{text-decoration:none;color:#131A38;white-space:nowrap}
+.g-link:hover{color:#1A7A43}
+.g-cta{text-decoration:none;background:#131A38;color:#F3EFE6!important;padding:12px 20px;border-radius:999px;white-space:nowrap}
+.g-burger{width:48px;height:48px;border-radius:50%;border:1px solid #131A38;background:transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0}
+.g-burger span{display:block;width:18px;height:2px;background:#131A38}
+.g-menu{position:fixed;inset:0;z-index:100;background:#17236A;color:#F3EFE6;display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:48px 80px;overflow:auto}
+.g-menu[hidden]{display:none}
+.g-menu a{color:#F3EFE6;text-decoration:none}
+.g-menu-l{display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.g-org{display:flex;align-items:center;gap:24px}
+.g-org img{width:110px;height:110px;display:block}
+.g-org span{display:block;font-size:16px;letter-spacing:.04em;margin-bottom:6px}
+.g-org strong{font-size:26px;line-height:1.4;display:block}
+.g-menu-l p{margin:0;font-size:15px;line-height:2}
+.g-menu-r{display:flex;flex-direction:column;gap:2px}
+.g-close{align-self:flex-end;width:56px;height:56px;border-radius:50%;border:1px solid #F3EFE6;background:transparent;color:#F3EFE6;font-size:22px;cursor:pointer}
+.g-mi{display:grid;grid-template-columns:64px 1fr auto;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid rgba(243,239,230,.2)}
+.g-mi:hover .g-ja{color:#8FD9B6}
+.g-no{font-size:14px;opacity:.7}.g-ja{font-size:22px;font-weight:700}.g-en{font-size:12px;letter-spacing:.14em;opacity:.7}
+.g-sub{padding:9px 0;border-bottom-color:rgba(243,239,230,.12)}.g-sub .g-ja{font-size:17px}.g-sub .g-no{opacity:.5}
+.g-sub.is-cur .g-ja{color:#8FD9B6}
+.g-subhead{margin-top:22px;font-size:12px;letter-spacing:.24em;opacity:.6}
+.g-footer{background:#17236A;color:#F3EFE6;padding:72px 0 36px}
+.g-footer a{color:#F3EFE6;text-decoration:none}.g-footer a:hover{opacity:.75}
+.g-fwrap{max-width:1120px;margin:0 auto;padding:0 48px;display:flex;flex-direction:column;gap:44px}
+.g-fgrid{display:grid;grid-template-columns:5fr 6fr;gap:40px}
+.g-forg{display:flex;align-items:center;gap:18px}
+.g-forg img{width:64px;height:64px;display:block}
+.g-forg span{display:block;font-size:13px}.g-forg strong{font-size:17px}
+.g-faddr{font-size:13px;line-height:1.9;opacity:.85;margin:16px 0 0}
+.g-fnav{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;font-size:14px;align-content:start}
+.g-fnav a{display:flex;gap:14px}.g-fnav .en{opacity:.6}
+.g-fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;opacity:.75;border-top:1px solid rgba(243,239,230,.2);padding-top:22px}
+.g-flinks{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:1000px){.g-link{display:none}}
+@media(max-width:768px){
+ .g-header{padding:12px 16px}.g-logo img{height:42px}.g-nav{gap:10px}.g-cta{padding:10px 14px;font-size:13px}.g-burger{width:44px;height:44px}
+ .g-menu{grid-template-columns:1fr;padding:20px 16px 40px;gap:20px}.g-menu-l{order:2}.g-org img{width:64px;height:64px}.g-org strong{font-size:17px}.g-org span{font-size:12px}
+ .g-mi{grid-template-columns:40px 1fr auto;gap:10px}.g-ja{font-size:18px}.g-sub .g-ja{font-size:15px}
+ .g-fwrap{padding:0 16px}.g-fgrid{grid-template-columns:1fr}.g-footer{padding:52px 0 30px}
+}
 </style>
 </head>
 <body>
-<header class="site-header">
-<a href="index.html"><img alt="BOISS 特定非営利活動法人 小笠原海洋島研究会" src="images/img-01.png"/></a>
-<nav aria-label="主要メニュー">
-<a class="hide-sp" href="index.html#about">私たちについて</a>
-<a href="index.html#activities">活動内容</a>
-<a class="hide-sp" href="index.html#projects">活動実績</a>
-<a class="btn-dark" href="index.html#contact">お問い合わせ</a>
+<header class="g-header">
+<a class="g-logo" href="index.html"><img alt="BOISS 特定非営利活動法人 小笠原海洋島研究会" src="images/img-01.png"/></a>
+<nav aria-label="主要メニュー" class="g-nav">
+<a class="g-link" href="index.html#about">私たちについて</a>
+<a class="g-link" href="index.html#activities">活動内容</a>
+<a class="g-link" href="index.html#projects">活動実績</a>
+<a class="g-link" href="index.html#topics">トピックス</a>
+<a class="g-cta" href="index.html#companies">企業のみなさまへ</a>
+<button aria-controls="g-menu" aria-expanded="false" aria-label="メニューを開く" class="g-burger" data-g-toggle="" type="button"><span></span><span></span></button>
 </nav>
 </header>
+<div class="g-menu" hidden="" id="g-menu">
+<div class="g-menu-l">
+<div class="g-org"><img alt="BOISSロゴ" src="images/img-02.jpg"/><div><span class="en">Bonin Oceanic Island Studies Society</span><strong>特定非営利活動法人<br/>小笠原海洋島研究会</strong></div></div>
+<p>東京から約1,000km。<br/>海洋島・小笠原のフィールドから、<br/>調べ、守り、伝えるNPOです。</p>
+</div>
+<div class="g-menu-r">
+<button aria-label="メニューを閉じる" class="g-close" data-g-toggle="" type="button">×</button>
+<a class="g-mi" href="index.html"><span class="en g-no">01</span><span class="g-ja">トップ</span><span class="en g-en">TOP</span></a>
+<a class="g-mi" href="index.html#about"><span class="en g-no">02</span><span class="g-ja">私たちについて・沿革</span><span class="en g-en">ABOUT US</span></a>
+<a class="g-mi" href="index.html#activities"><span class="en g-no">03</span><span class="g-ja">活動内容</span><span class="en g-en">ACTIVITIES</span></a>
+<a class="g-mi" href="index.html#numbers"><span class="en g-no">04</span><span class="g-ja">数字で見るBOISS</span><span class="en g-en">NUMBERS</span></a>
+<a class="g-mi" href="index.html#projects"><span class="en g-no">05</span><span class="g-ja">活動実績</span><span class="en g-en">PROJECTS</span></a>
+<a class="g-mi" href="index.html#companies"><span class="en g-no">06</span><span class="g-ja">企業のみなさまへ</span><span class="en g-en">FOR COMPANIES</span></a>
+<a class="g-mi" href="index.html#topics"><span class="en g-no">07</span><span class="g-ja">トピックス</span><span class="en g-en">TOPICS</span></a>
+<a class="g-mi" href="index.html#contact"><span class="en g-no">08</span><span class="g-ja">お問い合わせ</span><span class="en g-en">CONTACT</span></a>
+<span class="en g-subhead">ACTIVITY PAGES ／ 活動の詳しいページ</span>
+<a class="g-mi g-sub is-cur" href="insects.html"><span class="en g-no">—</span><span class="g-ja">希少昆虫の保全</span><span class="en g-en">ENDEMIC SPECIES</span></a>
+<a class="g-mi g-sub" href="chisan.html"><span class="en g-no">—</span><span class="g-ja">地産地消</span><span class="en g-en">LOCAL PRODUCTION</span></a>
+<a class="g-mi g-sub" href="sports.html"><span class="en g-no">—</span><span class="g-ja">ネイチャースポーツ</span><span class="en g-en">NATURE SPORTS</span></a>
+</div>
+</div>
 
 <main>
 <section class="hero">
@@ -225,7 +295,7 @@ figure:hover .photo img{transform:scale(1.025)}
 
 <section class="section" id="dragonfly">
 <div class="wrap">
-<div class="section-title"><h2>小笠原固有トンボ類の保全<span class="since-h en">2004―</span></h2><span class="en">DRAGONFLIES</span></div>
+<div class="section-title"><h2>小笠原固有トンボ類の保全<span class="since-h en">2004—</span></h2><span class="en">DRAGONFLIES</span></div>
 <p class="body-text">小笠原諸島には5種類の固有トンボが生息していますが、その中でも「オガサワラトンボ」と「オガサワラアオイトトンボ」、「ハナダカトンボ」の3種類は特に個体数が少なく、環境省の保護増殖事業の対象種となっており、さまざまな保全活動が進められています。</p>
 
 <div class="topic">
@@ -270,7 +340,7 @@ figure:hover .photo img{transform:scale(1.025)}
 
 <section class="section" id="hanmyo">
 <div class="wrap">
-<div class="section-title"><h2>オガサワラハンミョウの保全<span class="since-h en">2015―</span></h2><span class="sci-name"><i>Cylindera bonina</i></span></div>
+<div class="section-title"><h2>オガサワラハンミョウの保全<span class="since-h en">2015—</span></h2><span class="sci-name"><i>Cylindera bonina</i></span></div>
 <div class="split long">
 <div>
 <p class="body-text">小笠原諸島の無人島である兄島にのみ生息するオガサワラハンミョウの数は減少傾向にありますが、その原因は明確になっていません。BOISSでは2015年から環境省と協力して生息数調査を行っており、本種が減少していく様子を目の当たりにして悔しい思いを経験しています。</p>
@@ -290,14 +360,14 @@ figure:hover .photo img{transform:scale(1.025)}
 <article class="act-card"><figure><div class="photo"><img alt="荒れた斜面で外来植物を取り除き、生息環境を整備するメンバー" loading="lazy" src="images/insect-hanmyo-habitat.jpg"/></div><figcaption>整備の様子</figcaption></figure><h3>生息環境改善活動</h3><p>荒廃した環境を、オガサワラハンミョウが生息できる環境に整備しています。</p></article>
 </div>
 
-<p class="funding">※この活動の一部は、環境省生物多様性保全推進交付金（令和7～9年）、公益財団法人 自然保護助成基金様の第34期プロ・ナトゥーラ・ファンド助成（令和5年度）を活用させていただいております。</p>
+<p class="funding">※この活動の一部は、環境省生物多様性保全推進交付金（令和7〜9年）、公益財団法人 自然保護助成基金様の第34期プロ・ナトゥーラ・ファンド助成（令和5年度）を活用させていただいております。</p>
 <p class="research-link"><a href="https://www.jstage.jst.go.jp/article/pronatura/34/0/34_137/_article/-char/ja" rel="noopener" target="_blank">研究成果を見る（J-STAGE）<span aria-hidden="true"> ↗</span></a></p>
 </div>
 </section>
 
 <section class="section" id="hanabachi">
 <div class="wrap">
-<div class="section-title"><h2>身近な固有ハナバチ類の保全<span class="since-h en">2022―</span></h2><span class="en">WILD BEES</span></div>
+<div class="section-title"><h2>身近な固有ハナバチ類の保全<span class="since-h en">2022—</span></h2><span class="en">WILD BEES</span></div>
 <div class="topic" style="margin-top:0">
 <h3>固有ハナバチ類とは</h3>
 <div class="split mid">
@@ -307,20 +377,20 @@ figure:hover .photo img{transform:scale(1.025)}
 </div>
 <div class="topic">
 <h3>固有ハナバチ類保全活動</h3>
-<p class="body-text">当会では、父島においてわずかに残るハナバチ類の生息環境を保全する取組みを行っています。ハナバチ類の飛来が確認できるハマゴウという在来植物周りの外来植物を駆除し、その林縁に粘着性のトラップを設置し、捕獲することで、グリーンアノールを低密度化させようと活動しています。</p>
-<p class="body-text">さらに、外来植物を駆除した後には、ハナバチ類が好む在来の植物を再生させる取組みも進めています。</p>
+<p class="body-text">BOISSでは、父島においてわずかに残るハナバチ類の生息環境を保全する取り組みを行っています。ハナバチ類の飛来が確認できるハマゴウという在来植物周りの外来植物を駆除し、その林縁に粘着性のトラップを設置し、捕獲することで、グリーンアノールを低密度化させようと活動しています。</p>
+<p class="body-text">さらに、外来植物を駆除した後には、ハナバチ類が好む在来の植物を再生させる取り組みも進めています。</p>
 <div class="pair figs">
 <figure><div class="photo"><img alt="ハマゴウの花に飛来するイケダメンハナバチ" loading="lazy" src="images/insect-hanabachi.jpg"/></div><figcaption>ハマゴウに飛来するイケダメンハナバチ（固有ハナバチ）</figcaption></figure>
 <figure><div class="photo"><img alt="林縁で粘着性トラップを設置するメンバー" loading="lazy" src="images/insect-trap.jpg"/></div><figcaption>粘着性トラップ設置の様子</figcaption></figure>
 </div>
-<p class="funding">※この活動の一部は独立行政法人環境再生保全機構様の地球環境基金（令和5～7年）によって行われています。</p>
+<p class="funding">※この活動の一部は独立行政法人環境再生保全機構様の地球環境基金（令和5〜7年）によって行われています。</p>
 </div>
 </div>
 </section>
 
 <section class="section" id="zoumushi">
 <div class="wrap">
-<div class="section-title"><h2>チチジマヒメカタゾウムシの保全<span class="since-h en">2023―</span></h2><span class="sci-name"><i>Ogasawarazo rugosicephalus rugosicephalus</i></span></div>
+<div class="section-title"><h2>チチジマヒメカタゾウムシの保全<span class="since-h en">2023—</span></h2><span class="sci-name"><i>Ogasawarazo rugosicephalus rugosicephalus</i></span></div>
 <div class="topic" style="margin-top:0">
 <h3>ヒメカタゾウムシ類</h3>
 <p class="body-text">ヒメカタゾウムシ類は飛翔能力を退化させたことから、翅はあるのに飛べない昆虫です。そのため行動範囲が比較的狭く、列島や島ごと、同じ島でも樹上や地上に別の種が分布し、現在小笠原諸島において13種6亜種に分類されていることが分かっています（Morimoto, 2015）。特に樹上性のオガサワラヒメカタゾウムシ類は、外来爬虫類であるグリーンアノールの食害を受けやすい昆虫のひとつで、父島や母島ではすでにその影響で壊滅的な被害を受けており、絶滅が危ぶまれています。</p>
@@ -370,12 +440,12 @@ figure:hover .photo img{transform:scale(1.025)}
 <div>
 <p class="body-text">チチジマヒメカタゾウムシは、かつては父島全域に生息していましたが、現在は山域の極めて限られた地域にのみ残存しています。</p>
 <p class="body-text">本種は幼虫の間は地中で過ごし、5月から8月の間に成虫として地上で活動しますが、利用する食樹が限定されており、活動範囲も小さいです。昼夜を問わず活動することが分かっており、そのことが絶滅を免れている要因だと考えられていますが、専門家の調査によると父島での確認数は年々減少していることが分かっています。</p>
-<p class="body-text">当会では、父島で激減している本種を保全する取組みとして、本種が確認された樹木に対し、グリーンアノールの侵入を防ぐためにその食樹ごと保護ネットで覆う試みを行い、その有用性を検証しています。</p>
+<p class="body-text">BOISSでは、父島で激減している本種を保全する取り組みとして、本種が確認された樹木に対し、グリーンアノールの侵入を防ぐためにその食樹ごと保護ネットで覆う試みを行い、その有用性を検証しています。</p>
 <p class="body-text">有人島の身近な場所に、まだ保全できる固有昆虫が生息していることは意外と島民の方々に知られていない現状があり、この活動を少しずつ広めていきたいと考えています。</p>
 </div>
 <figure><div class="photo"><img alt="樹木を覆うように設置した保護ネット" loading="lazy" src="images/insect-net.jpg"/></div><figcaption>保護ネット設置の様子</figcaption></figure>
 </div>
-<p class="funding">※この活動の一部はTOYO TIREグループ環境保護基金（令和5～7年度）、一般社団法人abt（アクト・ビヨンド・トラスト）様からの助成金（令和5年度）を活用しています。</p>
+<p class="funding">※この活動の一部はTOYO TIREグループ環境保護基金（令和5〜7年度）、一般社団法人abt（アクト・ビヨンド・トラスト）様からの助成金（令和5年度）を活用しています。</p>
 <div class="refs">
 <h4>引用文献</h4>
 <p>Morimoto K (2015) Tribe Celeuthetini. Pp. 13–15, 203–251 &amp; 614–625. In Morimoto K, Nakamura T &amp; Kannô K (2015) <i>The Insects of Japan, 4. Curculionidae: Entiminae (Part 2) (Coleoptera)</i>. Touka Shobo, 758p.</p>
@@ -387,16 +457,28 @@ figure:hover .photo img{transform:scale(1.025)}
 <div class="back"><a href="index.html#activities">← 活動内容に戻る</a></div>
 </main>
 
-<footer>
-<div class="wrap">
+<footer class="g-footer">
+<div class="g-fwrap">
+<div class="g-fgrid">
 <div>
-<div class="f-org">
-<img alt="BOISSロゴ" src="images/img-02.jpg"/>
-<div><div class="en" style="font-size:13px">Bonin Oceanic Island Studies Society</div><div class="name">特定非営利活動法人 小笠原海洋島研究会</div></div>
+<div class="g-forg"><img alt="BOISSロゴ" src="images/img-02.jpg"/><div><span class="en">Bonin Oceanic Island Studies Society</span><strong>特定非営利活動法人 小笠原海洋島研究会</strong></div></div>
+<p class="g-faddr">〒100-2101 東京都小笠原村父島字奥村9番5 せーれー館<br/>TEL &amp; FAX 04998-2-3312 ／ info@ogasawara-boiss.jp</p>
 </div>
-<p class="f-addr">〒100-2101 東京都小笠原村父島字奥村9番5 せーれー館<br/>TEL &amp; FAX 04998-2-3312 ／ info@ogasawara-boiss.jp</p>
+<nav aria-label="フッターメニュー" class="g-fnav">
+<a href="index.html"><span class="en">01</span>トップ</a>
+<a href="index.html#about"><span class="en">02</span>私たちについて・沿革</a>
+<a href="index.html#activities"><span class="en">03</span>活動内容</a>
+<a href="index.html#numbers"><span class="en">04</span>数字で見るBOISS</a>
+<a href="index.html#projects"><span class="en">05</span>活動実績</a>
+<a href="index.html#companies"><span class="en">06</span>企業のみなさまへ</a>
+<a href="index.html#topics"><span class="en">07</span>トピックス</a>
+<a href="index.html#contact"><span class="en">08</span>お問い合わせ</a>
+<a href="insects.html"><span class="en">—</span>希少昆虫の保全</a>
+<a href="chisan.html"><span class="en">—</span>地産地消</a>
+<a href="sports.html"><span class="en">—</span>ネイチャースポーツ</a>
+</nav>
 </div>
-<div class="f-bottom"><a href="index.html" style="text-decoration:none">← トップページへ</a><span class="en">© Bonin Oceanic Island Studies Society (BOISS)</span></div>
+<div class="g-fbottom"><span class="g-flinks"><span>定款・事業報告</span><a aria-label="Instagram" href="https://www.instagram.com/boiss_ogasawara/" rel="noopener" target="_blank">Instagram</a><a aria-label="Facebook" href="https://www.facebook.com/ogasawaraboiss/" rel="noopener" target="_blank">Facebook</a></span><span class="en">© Bonin Oceanic Island Studies Society (BOISS)</span></div>
 </div>
 </footer>
 <script>
@@ -409,6 +491,13 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 els.forEach(function(el,i){el.classList.add('rv');var sib=el.parentElement&&el.parentElement.children;if(sib&&sib.length>1&&/act-grid|species|products/.test(el.parentElement.className)){el.style.transitionDelay=(Array.prototype.indexOf.call(sib,el)%4*80)+'ms';}io.observe(el);});
 setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},4000);
 })();
+</script>
+<script>
+(function(){var m=document.getElementById('g-menu');if(!m)return;var b=document.querySelector('.g-burger');
+function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');document.documentElement.style.overflow=o?'hidden':'';}
+document.querySelectorAll('[data-g-toggle]').forEach(function(x){x.addEventListener('click',function(){set(m.hidden);});});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)set(false);});})();
 </script>
 </body>
 </html>
